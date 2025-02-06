@@ -27,10 +27,10 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ amount }) => {
         const myhost = window.location.host;
         let URL = '';
 
-        if (myhost === 'localhost:3000') {
-            URL = 'http://localhost:3000';
-        } else {
+        if (myhost === 'vercel.com') {
             URL = 'https://market-place-builder-hackathon-03-gial6hk09.vercel.app/';
+        } else {
+            URL = 'https://stripe-payment-one-nu.vercel.app';
         }
 
         const response = await fetch(`${URL}/api/payment-intent`, {
